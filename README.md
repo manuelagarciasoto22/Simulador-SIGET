@@ -42,7 +42,7 @@ El simulador muestra en consola:
 Los resultados detallados se encuentran en el archivo [`salida_fifo_sjf.txt`](./salida_fifo_sjf.txt).
 
 ## 📑 Informe
-Se incluye el documento [`Informe_Simulador_SIGET.pdf`](./Informe_Simulador_SIGET.pdf) con:
+Se incluye el documento () con:
 - Objetivos y decisiones de diseño.  
 - Algoritmos utilizados y observaciones.  
 - Conclusiones sobre el mejor enfoque para el SIGET.  
@@ -51,5 +51,5 @@ Se incluye el documento [`Informe_Simulador_SIGET.pdf`](./Informe_Simulador_SIGE
 🔗 [Enlace al video de ejecución](#) *(agregar aquí Drive/YouTube/GitHub Video)*
 
 ## 👩‍💻 Autor
-Proyecto académico desarrollado por **[Tu Nombre]**  
+Proyecto académico desarrollado por Manuela García Soto 
 Ingeniería de Software – Sistemas Operativos  
