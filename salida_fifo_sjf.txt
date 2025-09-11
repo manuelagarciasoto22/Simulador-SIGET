@@ -1,0 +1,165 @@
+=== Simulación FIFO ===
+
+[t=0] Llegó P1 -> Listo (rafaga=6, prio=2)
+[t=0] P1 comienza ejecución (restante=6)
+[t=0] P1 ejecuta (restante=5)
+[t=1] Llegó P2 -> Listo (rafaga=3, prio=1)
+[t=1] P1 ejecuta (restante=4)
+[t=2] Llegó P3 -> Listo (rafaga=8, prio=3)
+[t=2] P1 ejecuta (restante=3)
+[t=3] P1 ejecuta (restante=2)
+[t=4] P1 ejecuta (restante=1)
+[t=5] P1 ejecuta (restante=0)
+[t=6] P1 termina. Turnaround=6, Respuesta=0, Espera=0
+[t=6] P2 comienza ejecución (restante=3)
+[t=6] P2 ejecuta (restante=2)
+[t=7] P2 ejecuta (restante=1)
+[t=8] P2 ejecuta (restante=0)
+[t=9] P2 termina. Turnaround=8, Respuesta=5, Espera=5
+[t=9] P3 comienza ejecución (restante=8)
+[t=9] P3 ejecuta (restante=7)
+[t=10] P3 ejecuta (restante=6)
+[t=11] P3 ejecuta (restante=5)
+[t=12] P3 ejecuta (restante=4)
+[t=13] P3 ejecuta (restante=3)
+[t=14] P3 ejecuta (restante=2)
+[t=15] P3 ejecuta (restante=1)
+[t=16] P3 ejecuta (restante=0)
+[t=17] P3 termina. Turnaround=15, Respuesta=7, Espera=7
+
+--- RESUMEN DE METRICAS ---
+PID | llegada | prio | rafaga | turnaround | respuesta | espera
+P1   |   0     |  2   |  6      |    6       |   0        |  0     
+P2   |   1     |  1   |  3      |    8       |   5        |  5     
+P3   |   2     |  3   |  8      |    15      |   7        |  7     
+
+Promedios -> Turnaround: 9.67, Respuesta: 4.00, Espera: 4.00
+
+
+=== Simulación SJF ===
+
+[t=0] Llegó P1 -> Listo (rafaga=6, prio=2)
+[t=0] P1 comienza ejecución (restante=6)
+[t=0] P1 ejecuta (restante=5)
+[t=1] Llegó P2 -> Listo (rafaga=3, prio=1)
+[t=1] P1 ejecuta (restante=4)
+[t=2] Llegó P3 -> Listo (rafaga=8, prio=3)
+[t=2] P1 ejecuta (restante=3)
+[t=3] P1 ejecuta (restante=2)
+[t=4] P1 ejecuta (restante=1)
+[t=5] P1 ejecuta (restante=0)
+[t=6] P1 termina. Turnaround=6, Respuesta=0, Espera=0
+[t=6] P2 comienza ejecución (restante=3)
+[t=6] P2 ejecuta (restante=2)
+[t=7] P2 ejecuta (restante=1)
+[t=8] P2 ejecuta (restante=0)
+[t=9] P2 termina. Turnaround=8, Respuesta=5, Espera=5
+[t=9] P3 comienza ejecución (restante=8)
+[t=9] P3 ejecuta (restante=7)
+[t=10] P3 ejecuta (restante=6)
+[t=11] P3 ejecuta (restante=5)
+[t=12] P3 ejecuta (restante=4)
+[t=13] P3 ejecuta (restante=3)
+[t=14] P3 ejecuta (restante=2)
+[t=15] P3 ejecuta (restante=1)
+[t=16] P3 ejecuta (restante=0)
+[t=17] P3 termina. Turnaround=15, Respuesta=7, Espera=7
+
+--- RESUMEN DE METRICAS ---
+PID | llegada | prio | rafaga | turnaround | respuesta | espera
+P1   |   0     |  2   |  6      |    6       |   0        |  0     
+P2   |   1     |  1   |  3      |    8       |   5        |  5     
+P3   |   2     |  3   |  8      |    15      |   7        |  7     
+
+Promedios -> Turnaround: 9.67, Respuesta: 4.00, Espera: 4.00
+
+
+=== Simulación Round-Robin (quantum=2) ===
+
+[t=0] Llegó P1 -> Listo (rafaga=6, prio=2)
+[t=0] P1 comienza ejecución (restante=6)
+[t=0] P1 ejecuta (restante=5)
+[t=1] Llegó P2 -> Listo (rafaga=3, prio=1)
+[t=1] P1 ejecuta (restante=4)
+[t=2] Quantum expiró para P1 -> Listo
+[t=2] Llegó P3 -> Listo (rafaga=8, prio=3)
+[t=2] P2 comienza ejecución (restante=3)
+[t=2] P2 ejecuta (restante=2)
+[t=3] P2 ejecuta (restante=1)
+[t=4] Quantum expiró para P2 -> Listo
+[t=4] P1 comienza ejecución (restante=4)
+[t=4] P1 ejecuta (restante=3)
+[t=5] P1 ejecuta (restante=2)
+[t=6] Quantum expiró para P1 -> Listo
+[t=6] P3 comienza ejecución (restante=8)
+[t=6] P3 ejecuta (restante=7)
+[t=7] P3 ejecuta (restante=6)
+[t=8] Quantum expiró para P3 -> Listo
+[t=8] P2 comienza ejecución (restante=1)
+[t=8] P2 ejecuta (restante=0)
+[t=9] P2 termina. Turnaround=8, Respuesta=1, Espera=5
+[t=9] P1 comienza ejecución (restante=2)
+[t=9] P1 ejecuta (restante=1)
+[t=10] P1 ejecuta (restante=0)
+[t=11] P1 termina. Turnaround=11, Respuesta=0, Espera=5
+[t=11] P3 comienza ejecución (restante=6)
+[t=11] P3 ejecuta (restante=5)
+[t=12] P3 ejecuta (restante=4)
+[t=13] Quantum expiró para P3 -> Listo
+[t=13] P3 comienza ejecución (restante=4)
+[t=13] P3 ejecuta (restante=3)
+[t=14] P3 ejecuta (restante=2)
+[t=15] Quantum expiró para P3 -> Listo
+[t=15] P3 comienza ejecución (restante=2)
+[t=15] P3 ejecuta (restante=1)
+[t=16] P3 ejecuta (restante=0)
+[t=17] P3 termina. Turnaround=15, Respuesta=4, Espera=7
+
+--- RESUMEN DE METRICAS ---
+PID | llegada | prio | rafaga | turnaround | respuesta | espera
+P2   |   1     |  1   |  3      |    8       |   1        |  5     
+P1   |   0     |  2   |  6      |    11      |   0        |  5     
+P3   |   2     |  3   |  8      |    15      |   4        |  7     
+
+Promedios -> Turnaround: 11.33, Respuesta: 1.67, Espera: 5.67
+
+
+=== Simulación Prioridad (preemtiva) ===
+
+[t=0] Llegó P1 -> Listo (rafaga=6, prio=2)
+[t=0] P1 comienza ejecución (restante=6)
+[t=0] P1 ejecuta (restante=5)
+[t=1] Llegó P2 -> Listo (rafaga=3, prio=1)
+[t=1] P1 ejecuta (restante=4)
+[t=2] P1 preemptado por proceso de mayor prioridad -> Listo
+[t=2] Llegó P3 -> Listo (rafaga=8, prio=3)
+[t=2] P2 comienza ejecución (restante=3)
+[t=2] P2 ejecuta (restante=2)
+[t=3] P2 ejecuta (restante=1)
+[t=4] P2 ejecuta (restante=0)
+[t=5] P2 termina. Turnaround=4, Respuesta=1, Espera=1
+[t=5] P1 comienza ejecución (restante=4)
+[t=5] P1 ejecuta (restante=3)
+[t=6] P1 ejecuta (restante=2)
+[t=7] P1 ejecuta (restante=1)
+[t=8] P1 ejecuta (restante=0)
+[t=9] P1 termina. Turnaround=9, Respuesta=0, Espera=3
+[t=9] P3 comienza ejecución (restante=8)
+[t=9] P3 ejecuta (restante=7)
+[t=10] P3 ejecuta (restante=6)
+[t=11] P3 ejecuta (restante=5)
+[t=12] P3 ejecuta (restante=4)
+[t=13] P3 ejecuta (restante=3)
+[t=14] P3 ejecuta (restante=2)
+[t=15] P3 ejecuta (restante=1)
+[t=16] P3 ejecuta (restante=0)
+[t=17] P3 termina. Turnaround=15, Respuesta=7, Espera=7
+
+--- RESUMEN DE METRICAS ---
+PID | llegada | prio | rafaga | turnaround | respuesta | espera
+P2   |   1     |  1   |  3      |    4       |   1        |  1     
+P1   |   0     |  2   |  6      |    9       |   0        |  3     
+P3   |   2     |  3   |  8      |    15      |   7        |  7     
+
+Promedios -> Turnaround: 9.33, Respuesta: 2.67, Espera: 3.67
+
