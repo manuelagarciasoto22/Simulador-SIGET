@@ -14,15 +14,6 @@ El simulador demuestra cómo diferentes algoritmos gestionan procesos del sistem
 - **Round-Robin (RR)** → Ejecución con reparto equitativo (quantum configurable).  
 - **Prioridad (preemptiva)** → Los procesos críticos se ejecutan de inmediato.  
 
-## 📂 Estructura del repositorio
-```
-📦 simulador-planificador
- ┣ 📜 simulador_planificador_extendido.py   # Código fuente principal
- ┣ 📜 salida_fifo_sjf.txt                   # Ejecución de los algoritmos
- ┣ 📜 Informe_Simulador_SIGET.pdf           # Informe técnico (máx. 2 páginas)
- ┗ 📜 README.md                             # Documentación del repositorio
-```
-
 ## ▶️ Ejecución
 1. Clonar este repositorio:
    ```bash
@@ -39,7 +30,7 @@ El simulador muestra en consola:
 - **Evolución de los estados**: Nuevo → Listo → En ejecución → Bloqueado → Terminado.  
 - **Métricas de desempeño**: turnaround, tiempo de espera y tiempo de respuesta.  
 
-Los resultados detallados se encuentran en el archivo [`salida_fifo_sjf.txt`](./salida_fifo_sjf.txt).
+Los resultados detallados se encuentran en el archivo [`salida_fifo_sjf.txt`](salidas.txt).
 
 ## 📑 Informe
 Se incluye el documento (https://github.com/manuelagarciasoto22/Simulador-SIGET/blob/main/Informe%20%E2%80%93%20Simulador%20de%20Planificaci%C3%B3n%20de%20Procesos%20(SIGET).docx) con:
