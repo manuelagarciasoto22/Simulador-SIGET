@@ -42,7 +42,7 @@ El simulador muestra en consola:
 Los resultados detallados se encuentran en el archivo [`salida_fifo_sjf.txt`](./salida_fifo_sjf.txt).
 
 ## 📑 Informe
-Se incluye el documento () con:
+Se incluye el documento (https://github.com/manuelagarciasoto22/Simulador-SIGET/blob/main/Informe%20%E2%80%93%20Simulador%20de%20Planificaci%C3%B3n%20de%20Procesos%20(SIGET).docx) con:
 - Objetivos y decisiones de diseño.  
 - Algoritmos utilizados y observaciones.  
 - Conclusiones sobre el mejor enfoque para el SIGET.  
