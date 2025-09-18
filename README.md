@@ -39,7 +39,7 @@ Se incluye el documento (https://github.com/manuelagarciasoto22/Simulador-SIGET/
 - Conclusiones sobre el mejor enfoque para el SIGET.  
 
 ## 🎥 Evidencia en video
-🔗 [Enlace al video de ejecución](#) *(agregar aquí Drive/YouTube/GitHub Video)*
+🔗 [Enlace al video de ejecución](#) 
 
 ## 👩‍💻 Autor
 Proyecto académico desarrollado por Manuela García Soto 
